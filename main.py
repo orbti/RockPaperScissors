@@ -52,7 +52,7 @@ def determine_winner(user_action, computer_action):
         score["losses"] += 1
 
 
-while True:
+def main():
     score = dict(ties=0, wins=0, losses=0)
     try:
         game_count = get_games_played()
@@ -80,3 +80,5 @@ while True:
     play_again = input("Play again (y/n): ")
     if play_again != "y":
         break
+if __main__ == '__name__':
+    main()
